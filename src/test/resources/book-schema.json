@@ -4,7 +4,7 @@
   "title": "book",
   "properties": {
     "id": {
-      "type": "number"
+      "type": "string"
     },
     "title": {
       "type": "string"
