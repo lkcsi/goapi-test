@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "book set",
+  "type": "array",
+  "items": {
+    "title": "book",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "title": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "quantity": {
+        "type": "number",
+        "minimum": 0
+      }
+    }
+  }
+}
