@@ -29,12 +29,13 @@ public class CreateBookTest {
 
     @Test
     public void testCreateBook() {
-        given()
+        var response = given()
                 .body(testObject.toString())
                 .contentType("application/json")
         .when()
-                .post()
-        .then()
+                .post();
+
+        response.then()
                 .log().all()
                 .assertThat()
                 .statusCode(201)
@@ -42,7 +43,6 @@ public class CreateBookTest {
                 .body("author", is(testObject.get("author")))
                 .body("quantity", is(testObject.get("quantity")))
                 .body(matchesJsonSchemaInClasspath("book-schema.json"));
-
     }
 
     @Test
